@@ -1,0 +1,9 @@
+num <-- user input
+
+
+IF value of user input can be divided by 2 and the remainder is equal to 0
+OUTPUT given num and " is even"
+
+
+ELSE 
+OUTPUT  given num and " is odd"
