@@ -1,0 +1,37 @@
+bet = input("Enter your bet: ")
+deck= shuffle_cards()
+player_cards = [draw_twocards(deck)]
+dealer_cards = [draw_twocards(deck))]
+show_cards(player_cards)
+print("Dealer's visible card value is 10.")
+if calculate_hand_value(player_cards) < 17:
+print("Player's cards value is lower than 17.")
+print("Player's cards are 4 of Clubs and an Ace.")
+ace_value = input("Choose the value of the Ace card (1 or 11): ")
+if ace_value == "1":
+print("The overall value is 5.")
+else:
+print("The overall value is 15.")
+else:
+print("Player's cards value is not on or over 17.")
+print("Choose to HIT or STAND.")
+player_choice = input("Enter your choice (HIT or STAND): ")
+if player_choice == "HIT":
+new_card = draw_card(deck)
+print("Player received a", new_card, "card.")
+if ace_value == "1":
+print("The new card value is 11.")
+else:
+print("The new card value is 21.")
+else:
+if calculate_hand_value(player_cards) == 11:
+print("Player received a card with a value of 10.")
+print("The new card value is 21.")
+else:
+print("Player's cards value is 21 from the beginning.")
+print("Player chooses to STAND.")
+show_card(dealer_cards[1])
+print("The other card is 9 of Clubs.")
+print("Dealer's overall value of cards is 19.")
+print("Dealer chooses to STAND.")
+print("Player wins with a card value of 21.")
